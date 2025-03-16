@@ -14,7 +14,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-/* Logo */
+
 .navbar .logo {
     width: 180px;
     transition: transform 0.3s ease-in-out;
@@ -24,7 +24,7 @@
     transform: scale(1.05);
 }
 
-/* Navbar Menu */
+
 .navbar-menu {
     display: flex;
     list-style: none;
@@ -51,14 +51,14 @@
     background: rgba(0, 0, 0, 0.05);
 }
 
-/* Navbar Right Section */
+
 .navbar-right {
     display: flex;
     align-items: center;
     gap: 35px;
 }
 
-/* Basket Icon */
+
 .basket-dot {
     position: relative;
     display: flex;
@@ -75,7 +75,7 @@
     right: -5px;
 }
 
-/* Button Styling */
+
 .navbar button {
     background: #f39c12;
     color: white;
@@ -95,13 +95,13 @@
     border: 1px solid #f39c12;
 }
 
-/* Sticky Navbar Effect on Scroll */
+
 .navbar.scrolled {
     background: #1a1a2e;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Navbar */
+
 @media (max-width: 900px) {
     .navbar .logo {
         width: 140px;
@@ -122,7 +122,7 @@
     }
 }
 
-/* Mobile View */
+
 @media (max-width: 750px) {
     .navbar-menu {
         display: flex;
@@ -135,7 +135,7 @@
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
         padding: 15px 0;
         align-items: center;
-        display: none; /* Initially hidden */
+        display: none; 
     }
 
     .navbar-menu.show {

@@ -1,5 +1,5 @@
 .cart {
-    margin-top: 100px;
+    margin-top: 130px;
 }
 
 .cart-items-title {
@@ -60,7 +60,7 @@
     gap: 20px;
     padding: 20px;
     border-radius: 8px;
-    background-color: #f6f6f6;
+    background-color: #f1f1f1;
 }
 
 .cart-total-details {
@@ -88,7 +88,7 @@
     text-align: center;
     padding: 20px;
     border-radius: 8px;
-    background-color: #f6f6f6;
+    background-color: #f1f1f1;
 }
 
 .cart-promocode-input {
@@ -112,4 +112,13 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 4px;
+}
+
+@media(max-width:750px){
+    .cart-bottom{
+        flex-direction: column-reverse;
+    }
+    .cart-promocode{
+        justify-content: start;
+    }
 }

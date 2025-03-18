@@ -19,10 +19,10 @@ const PlaceOrder = () => {
           <input type="text" placeholder='State'/>
         </div>
         <div className='multi-fields'>
-          <input type="text" placeholder='Zip Code'/>
+          <input type="number" placeholder='Zip Code'/>
           <input type="text" placeholder='Country'/>
         </div>
-        <input type="text" placeholder='Phone'/>
+        <input type="number" placeholder='Phone'/>
       </div>
       <div className="cart-total">
           <h2>Cart Totals</h2>

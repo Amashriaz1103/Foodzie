@@ -4,9 +4,13 @@
     align-items: center;
     padding: 8px 4%;
 }
+
 .navbar .logo{
-    width:max(18%,150px)
+    width: max(200px, 10%);
 }
+
 .navbar .profile{
     width: 40px;
+    cursor: pointer;
+    border-radius:50% ;
 }

@@ -41,3 +41,8 @@
     margin-top: 50px;
 }
 
+@media (max-width0:750px){
+    .place-order{
+        flex-direction: column;
+    }
+}

@@ -9,7 +9,8 @@ const StoreContexProvider = (props)=>{
     const [food_list,setFoodList] = useState([])
 
     
-    const url = "http://localhost:4000"
+    // const url = "http://localhost:4000"
+    const url = "https://foodzie-3von.onrender.com"
 
     const fetchFoodList = async ()=>{
         const response = await axios.get(url+"/api/food/list")

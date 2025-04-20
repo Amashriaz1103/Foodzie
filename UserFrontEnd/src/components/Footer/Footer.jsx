@@ -10,18 +10,18 @@ const Footer = () => {
                 <img className="footer-logo" src={assets.logo_bottom} alt="" />
                 <p>Food Prep is a full-stack project designed for hands-on teaching, helping students learn full-stack development. It's used by FACEPrep, an ed-tech company focused on equipping students with the skills to achieve their career aspirations.</p>
                 <div className="footer-social-icons">
-                    <a href=""><img src={assets.facebook_icon} alt="" /></a>
-                    <a href=""><img src={assets.twitter_icon} alt="" /></a>
-                    <a href=""><img src={assets.linkedin_icon} alt="" /></a>
+                    <a href="https://www.facebook.com/faceprep/"><img src={assets.facebook_icon} alt="" /></a>
+                    <a href="https://x.com/Faceprepcampus"><img src={assets.twitter_icon} alt="" /></a>
+                    <a href="https://www.linkedin.com/company/faceprep"><img src={assets.linkedin_icon} alt="" /></a>
                 </div>
             </div>
             <div className="footer-content-center">
                 <h2>Company</h2>
                 <ul>
-                    <a href="/"><li>Home</li></a>
-                    <a href=""><li>About us</li></a>
-                    <a href=""><li>Courses</li></a>
-                    <a href=""><li>Reviews</li></a>
+                    <a href="https://faceprep.edmingle.com/"><li>Home</li></a>
+                    <a href="https://faceprep.edmingle.com/contact-us"><li>About us</li></a>
+                    <a href="https://faceprep.edmingle.com/courses"><li>Courses</li></a>
+                    <a href="https://faceprep.edmingle.com/reviews"><li>Reviews</li></a>
                 </ul>
             </div>
             <div className="footer-content-right">

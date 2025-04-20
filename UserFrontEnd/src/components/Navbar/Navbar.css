@@ -1,150 +1,121 @@
-.navbar {
-    width: 100%;
-    height: 80px;
-    padding: 1.2rem 5%;
+.navbar{
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #e6e6ff;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
 }
 
-
-.navbar .logo {
-    width: 180px;
-    transition: transform 0.3s ease-in-out;
+.navbar .logo{
+    width: 200px;
 }
 
-.navbar .logo:hover {
-    transform: scale(1.05);
-}
-
-
-.navbar-menu {
+.navbar-menu{
     display: flex;
-    list-style: none;
-    gap: 2rem;
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: var(--theme-color);
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    list-style-type: none;
+    gap:20px;
+    color:#49557e;
+    font-size: 1.8rem;
 }
 
-.navbar-menu li {
-    position: relative;
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap:40px;
+}
+
+.navbar button{
+    background: transparent;
+    color:#49557e;
+    font-size:16px;
+    padding: 10px 30px;
+    border: 1px solid var(--theme-color);
+    border-radius: 50px;
     cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    text-align: center;
+    transition: 0.5s;
 }
 
-.navbar-menu li:hover {
-    color: #f39c12;
-    background: rgba(0, 0, 0, 0.05);
+.navbar button:hover{
+    background-color:  #f2f4ff;
 }
 
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+.navbar li{
+    cursor: pointer;
 }
 
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
 
-.basket-dot {
+.basket-dot{
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
-.basket-dot .dot {
+.basket-dot .dot{
     position: absolute;
     min-width: 10px;
     min-height: 10px;
     background-color: var(--theme-color);
     border-radius: 50%;
-    top: -5px;
-    right: -5px;
+    top:-8px;
+    right:-8px;
 }
 
+.navbar-profile{
+    position: relative;
+}
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right:0;
+    z-index: 1;
+}
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: #f2f4ff;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid var(--theme-color);
+    outline:2px solid white;
+    list-style: none;
+}
 
-.navbar button {
-    background: #f39c12;
-    color: white;
-    font-size: 1.5rem;
-    padding: 0.9rem 1.8rem;
-    border: none;
-    border-radius: 25px;
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    font-size: 1.3rem;
 }
 
-.navbar button:hover {
-    background: white;
-    color: #f39c12;
-    transform: translateY(-2px);
-    border: 1px solid #f39c12;
+.nav-profile-dropdown img{
+    width: 20px;   
 }
-
-
-.navbar.scrolled {
-    background: #1a1a2e;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+.nav-profile-dropdown li:hover{
+    color:var(--theme-color)
 }
-
 
 @media (max-width: 900px) {
-    .navbar .logo {
-        width: 140px;
+    .navbar .logo{
+        width:140px;
     }
-    .navbar-menu {
-        gap: 15px;
-        font-size: 1.4rem;
+    .navbar-menu{
+        gap:15px;
+        font-size: 1.6rem;
     }
-    .navbar-right {
-        gap: 20px;
+    .navbar-right{
+        gap:20px;
     }
-    .navbar-right img {
-        width: 20px;
+    .navbar-right img{
+        width:20px;
     }
-    .navbar button {
+    .navbar button{
         padding: 7px 20px;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 }
-
-
 @media (max-width: 750px) {
-    .navbar-menu {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: var(--light-bg);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        align-items: center;
-        display: none; 
-    }
-
-    .navbar-menu.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-        font-size: 2rem;
-        cursor: pointer;
-    }
+    .navbar-menu{display: none;}
 }

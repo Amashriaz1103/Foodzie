@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import "./Cart.css";
-import { StoreContext } from "../../context/StoreContext"; 
-import { assets } from "../../assets/assets"; 
+import {assets} from '../../assets/assets'
+import {StoreContext} from "../../context/StoreContext";
 import {useNavigate} from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, addToCart, removeFromCart, food_list, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItems, addToCart, removeFromCart, food_list ,getTotalCartAmount,url} = useContext(StoreContext);
   const navigate = useNavigate();
   return (
     <div className="cart">
@@ -17,39 +17,37 @@ const Cart = () => {
         <p>Total</p>
         <p>Modify</p>
       </div>
+      <br />
       <hr />
-
       {food_list.map((food, index) => {
         if (cartItems[food._id] > 0) {
           return (
-            <div key={index}>
+            <>
               <div className="cart-items-title cart-items-item">
-                <img src={food.image} alt="" />
+                <img src={url+"/image/"+food.image} alt="" />
                 <p>{food.name}</p>
-                <p>{food.price.toFixed(2)}</p>
+                <p>{food.price}</p>
                 <p>{cartItems[food._id]}</p>
-                <p>{(cartItems[food._id] * food.price).toFixed(2)}</p>
-
-                <div className="cart-counter">
+                <p>{cartItems[food._id] * food.price}</p>
+                <div className="cart-counter food-item-counter">
                   <img
                     onClick={() => removeFromCart(food._id)}
                     src={assets.remove_icon_red}
-                    alt="Remove"
+                    alt=""
                   />
                   <p>{cartItems[food._id]}</p>
                   <img
                     onClick={() => addToCart(food._id)}
                     src={assets.add_icon_green}
-                    alt="Add"
+                    alt=""
                   />
                 </div>
               </div>
-              <hr /> 
-            </div>
+              <hr />
+            </>
           );
         }
       })}
-
       <div className="cart-bottom">
         <div className="cart-total">
           <h2>Cart Totals</h2>
@@ -65,16 +63,16 @@ const Cart = () => {
             </div>
             <hr />
             <div className="cart-total-details">
-              <p>Total</p>
-              <p>₹{getTotalCartAmount()+20}</p>
+              <b>Total</b>
+              <b>₹{getTotalCartAmount()!==0?getTotalCartAmount()+20:0}</b>
             </div>
           </div>
           <button onClick={()=>navigate('/order')}> Proceed to Checkout</button>
         </div>
         <div className="cart-promocode">
-          <p>If you have a promo code, enter it here:</p>
+          <p>If you have a promocode, enter it here</p>
           <div className="cart-promocode-input">
-            <input type="text" placeholder="Enter promo code" />
+            <input type="text" placeholder="Enter promocode" />
             <button>Apply</button>
           </div>
         </div>
